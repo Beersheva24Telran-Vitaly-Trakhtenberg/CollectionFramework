@@ -61,4 +61,30 @@ public class ArrayListTest extends ListTest
         assertEquals("two", removed);
         assertArrayEquals(expected, test.toArray());
     }
+
+    @Test
+    void indexOfTest()
+    {
+        Integer[] src = new Integer[] {100, 2, 15, -10, 15, 100, 200, 25};
+
+        ArrayList<Integer> testInt = new ArrayList<>(50);
+        for (Integer i : src) {
+            testInt.add(i);
+        }
+
+        assertEquals(2, testInt.indexOf(15));
+    }
+
+    @Test
+    void lastIndexOfTest()
+    {
+        Integer[] src = new Integer[] {100, 2, 15, -10, 15, 100, 200, 25};
+
+        ArrayList<Integer> testInt = new ArrayList<>(50);
+        for (Integer i : src) {
+            testInt.add(i);
+        }
+
+        assertEquals(4, testInt.lastIndexOf(15));
+    }
 }

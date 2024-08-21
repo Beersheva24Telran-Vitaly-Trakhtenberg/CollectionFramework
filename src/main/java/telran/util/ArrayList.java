@@ -56,6 +56,11 @@ public class ArrayList<T> implements List<T>
     }
 
     @Override
+    public boolean remove(T pattern) {
+        return false;
+    }
+
+    @Override
     public T get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
@@ -65,12 +70,26 @@ public class ArrayList<T> implements List<T>
 
     @Override
     public int indexOf(T pattern) {
-        return 0;
+        int res = -1;
+        for (int i = 0; i < size; i++) {
+            if (pattern.equals(array[i])) {
+                res = i;
+                break;
+            }
+        }
+        return res;
     }
 
     @Override
     public int lastIndexOf(T pattern) {
-        return 0;
+        int res = -1;
+        for (int i = size-1; i >= 0; i--) {
+            if (pattern.equals(array[i])) {
+                res = i;
+                break;
+            }
+        }
+        return res;
     }
 
     private void reallocate()
@@ -84,18 +103,13 @@ public class ArrayList<T> implements List<T>
     }
 
     @Override
-    public boolean remove(T pattern) {
-        return false;
-    }
-
-    @Override
     public int size() {
         return size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
