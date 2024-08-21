@@ -2,7 +2,6 @@ package telran.util;
 
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.stream.Stream;
 
 public class ArrayList<T> implements List<T>
 {
@@ -41,7 +40,8 @@ public class ArrayList<T> implements List<T>
     }
 
     @Override
-    public T remove(int index) {
+    public T remove(int index)
+    {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
@@ -56,12 +56,18 @@ public class ArrayList<T> implements List<T>
     }
 
     @Override
-    public boolean remove(T pattern) {
-        return false;
+    public boolean remove(T pattern)
+    {
+        int index = indexOf(pattern);
+        if (index > -1) {
+            remove(index);
+        }
+        return index > -1;
     }
 
     @Override
-    public T get(int index) {
+    public T get(int index)
+    {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
@@ -69,7 +75,8 @@ public class ArrayList<T> implements List<T>
     }
 
     @Override
-    public int indexOf(T pattern) {
+    public int indexOf(T pattern)
+    {
         int res = -1;
         for (int i = 0; i < size; i++) {
             if (pattern.equals(array[i])) {
@@ -81,7 +88,8 @@ public class ArrayList<T> implements List<T>
     }
 
     @Override
-    public int lastIndexOf(T pattern) {
+    public int lastIndexOf(T pattern)
+    {
         int res = -1;
         for (int i = size-1; i >= 0; i--) {
             if (pattern.equals(array[i])) {
@@ -103,18 +111,21 @@ public class ArrayList<T> implements List<T>
     }
 
     @Override
-    public int size() {
+    public int size()
+    {
         return size;
     }
 
     @Override
-    public boolean isEmpty() {
+    public boolean isEmpty()
+    {
         return size == 0;
     }
 
     @Override
-    public boolean contains(T pattern) {
-        return false;
+    public boolean contains(T pattern)
+    {
+        return indexOf(pattern) > -1;
     }
 
     /**
@@ -123,12 +134,25 @@ public class ArrayList<T> implements List<T>
      * @return an Iterator.
      */
     @Override
-    public Iterator<T> iterator() {
-        return null;
+    public Iterator<T> iterator()
+    {
+        return new Iterator<T>() {
+            private int current = 0;
+
+            @Override
+            public boolean hasNext() {
+                return current < size && array[current] != null;
+            }
+
+            @Override
+            public T next() {
+                return (T) array[current++];
+            }
+        };
     }
 
-
-    public T[] toArray() {
+    public T[] toArray()
+    {
         return (T[]) Arrays.copyOf(array, size, array.getClass());
     }
 }

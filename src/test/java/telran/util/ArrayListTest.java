@@ -1,6 +1,8 @@
 package telran.util;
 
 import java.util.Arrays;
+import java.util.Iterator;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -86,5 +88,35 @@ public class ArrayListTest extends ListTest
         }
 
         assertEquals(4, testInt.lastIndexOf(15));
+    }
+
+    @Test
+    void iteratorTest()
+    {
+        Integer[] src = new Integer[] {100, 2, 15, -10, 15, 100, 200, 25};
+
+        ArrayList<Integer> testInt = new ArrayList<>(50);
+        for (Integer i : src) {
+            testInt.add(i);
+        }
+
+        Iterator<String> iterator = test.iterator();
+        assertTrue(iterator.hasNext());
+        assertEquals("one", iterator.next());
+        assertTrue(iterator.hasNext());
+        assertEquals("two", iterator.next());
+        assertTrue(iterator.hasNext());
+        assertEquals("three", iterator.next());
+        assertFalse(iterator.hasNext());
+
+        Iterator<Integer> iterator1 = testInt.iterator();
+        assertTrue(iterator1.hasNext());
+        assertEquals(100, iterator1.next());
+        assertTrue(iterator1.hasNext());
+        assertEquals(2, iterator1.next());
+        assertTrue(iterator1.hasNext());
+        assertEquals(15, iterator1.next());
+        assertTrue(iterator1.hasNext());
+        assertEquals(-10, iterator1.next());
     }
 }
