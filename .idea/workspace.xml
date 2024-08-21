@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="415801c8-a7c3-48c1-8412-d137823f0405" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/util/ArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/util/Collection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/util/List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/telran/util/ArrayListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/telran/util/CollectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/telran/util/ListTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2kvAigkmbFzDx2tK9aHX3AanqsF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ArrayListTest.addByIndexTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "fileTemplates"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ArrayListTest.addByIndexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Collections-Framework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="telran.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="telran.util" />
+      <option name="MAIN_CLASS_NAME" value="telran.util.ArrayListTest" />
+      <option name="METHOD_NAME" value="addByIndexTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ArrayListTest.addByIndexTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="415801c8-a7c3-48c1-8412-d137823f0405" name="Changes" comment="" />
+      <created>1724153807699</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724153807699</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="com.github.evgenys91.machinet.common.dslhistory.DslHistoryState">
+    <option name="historyDtoById">
+      <map>
+        <entry key="184c46">
+          <value>
+            <ChatHistoryModel>
+              <option name="contextFilesPaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/ArrayListTest.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/ArrayList.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/List.java" />
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/ListTest.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/Collection.java" />
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/CollectionTest.java" />
+                </list>
+              </option>
+              <option name="id" value="184c46" />
+              <option name="initiateTms" value="1724258625010" />
+              <option name="request" value=" System.out.println(test); - снова забыл, как это вывести не ссылкой на массив или объект, а его значениями?" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="Чтобы вывести содержимое массива, а не ссылку на объект, вы можете использовать метод `Arrays.toString()`. Этот метод преобразует массив в строку, содержащую все его элементы.&#10;&#10;Вот пример, как это сделать:&#10;&#10;```java&#10;import java.util.Arrays;&#10;&#10;public class ArrayListTest {&#10;    public static void main(String[] args) {&#10;        String[] src = new String[] {&quot;one&quot;, &quot;two&quot;, &quot;three&quot;};&#10;        String[] expected = new String[] {&quot;one&quot;, &quot;two&quot;, &quot;OK&quot;, &quot;three&quot;};&#10;&#10;        ArrayList&lt;String&gt; test = new ArrayList&lt;&gt;(10);&#10;        test.add(&quot;one&quot;);&#10;        test.add(&quot;two&quot;);&#10;        test.add(&quot;three&quot;);&#10;        test.add(2, &quot;OK&quot;);&#10;&#10;        // Выводим содержимое массива&#10;        System.out.println(Arrays.toString(test.toArray())); // Output: [one, two, OK, three]&#10;    }&#10;}&#10;```&#10;&#10;### Пример с вашим классом `ArrayList`&#10;&#10;Для вашего класса `ArrayList`, вам нужно добавить метод `toArray()`, который преобразует внутренний массив в массив типа `T`. Вот как это можно сделать:&#10;&#10;1. Добавьте метод `toArray()` в ваш класс `ArrayList`:&#10;&#10;```java&#10;public class ArrayList&lt;T&gt; implements List&lt;T&gt; {&#10;    // ... ваш существующий код ...&#10;&#10;    public T[] toArray() {&#10;        return Arrays.copyOf(array, size, (Class&lt;? extends T[]&gt;) array.getClass());&#10;    }&#10;}&#10;```&#10;&#10;2. Используйте `Arrays.toString()` для вывода содержимого массива:&#10;&#10;```java&#10;import java.util.Arrays;&#10;&#10;public class ArrayListTest extends ListTest {&#10;    @BeforeEach&#10;    @Override&#10;    void setUp() {&#10;        collection = new ArrayList&lt;&gt;(3);&#10;        super.setUp();&#10;    }&#10;&#10;    @Test&#10;    void addLastTest() {&#10;        // ваш тест&#10;    }&#10;&#10;    @Test&#10;    void addByIndexTest() {&#10;        String[] src = new String[] {&quot;one&quot;, &quot;two&quot;, &quot;three&quot;};&#10;        String[] expected = new String[] {&quot;one&quot;, &quot;two&quot;, &quot;OK&quot;, &quot;three&quot;};&#10;&#10;        ArrayList&lt;String&gt; test = new ArrayList&lt;&gt;(10);&#10;        test.add(&quot;one&quot;);&#10;        test.add(&quot;two&quot;);&#10;        test.add(&quot;three&quot;);&#10;        test.add(2, &quot;OK&quot;);&#10;&#10;        // Выводим содержимое массива&#10;        System.out.println(Arrays.toString(test.toArray())); // Output: [one, two, OK, three]&#10;    }&#10;}&#10;```&#10;&#10;### Объяснение&#10;&#10;- Метод `toArray()` в классе `ArrayList` создает копию внутреннего массива `array`, содержащую только элементы до текущего размера `size`.&#10;- Метод `Arrays.toString()` преобразует массив в строку, содержащую все его элементы, что позволяет вывести содержимое массива в удобочитаемом виде.&#10;&#10;Теперь при вызове `System.out.println(Arrays.toString(test.toArray()));` вы получите вывод значений массива, а не ссылку на объект." />
+              <option name="responseFileName" value="" />
+              <option name="responseFilePath" value="" />
+              <option name="responseTms" value="1724258637273" />
+              <option name="usedLocalFilePaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/CollectionTest.java" />
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/ListTest.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/ArrayList.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/List.java" />
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/ArrayListTest.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/Collection.java" />
+                </list>
+              </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="1a07e1">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="1a07e1" />
+              <option name="initiateTms" value="1724158085781" />
+              <option name="request" value=" где в IntelliJ отредактировать шаблон .gitignore, который вставляется при создании проекта?" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="В IntelliJ IDEA можно редактировать шаблоны файлов, включая `.gitignore`, которые используются при создании новых проектов. Для этого нужно выполнить следующие шаги:&#10;&#10;1. **Открыть настройки IntelliJ IDEA**:&#10;   - На Windows/Linux: `File` &gt; `Settings`&#10;   - На macOS: `IntelliJ IDEA` &gt; `Preferences`&#10;&#10;2. **Перейти к настройкам шаблонов файлов**:&#10;   - В окне настроек перейдите в раздел `Editor` &gt; `File and Code Templates`.&#10;&#10;3. **Найти и отредактировать шаблон `.gitignore`**:&#10;   - В разделе `File and Code Templates` выберите вкладку `Files`.&#10;   - В списке шаблонов найдите `.gitignore` (если его нет, вы можете создать новый шаблон, нажав на кнопку `+` и назвав его `.gitignore`).&#10;   - Выберите шаблон `.gitignore` и отредактируйте его по своему усмотрению.&#10;&#10;4. **Сохранить изменения**:&#10;   - После внесения изменений нажмите `OK` или `Apply`, чтобы сохранить изменения.&#10;&#10;Теперь при создании новых проектов в IntelliJ IDEA будет использоваться обновленный шаблон `.gitignore`.&#10;&#10;Если у вас нет шаблона `.gitignore` в списке, вы можете создать его вручную, добавив необходимые правила и сохранив его как новый шаблон." />
+              <option name="responseFileName" value="" />
+              <option name="responseFilePath" value="" />
+              <option name="responseTms" value="1724158091723" />
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="226fed">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="226fed" />
+              <option name="initiateTms" value="1724258776907" />
+              <option name="request" value=" а ничего, что у нас нет метода toArray для test?" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="Извините за недоразумение. Давайте добавим метод `toArray` в ваш класс `ArrayList`, чтобы вы могли корректно выводить содержимое массива.&#10;&#10;### Добавление метода `toArray` в класс `ArrayList`&#10;&#10;1. Добавьте метод `toArray` в ваш класс `ArrayList`:&#10;&#10;```java&#10;import java.util.Arrays;&#10;import java.util.Iterator;&#10;&#10;public class ArrayList&lt;T&gt; implements List&lt;T&gt; {&#10;    private static final int DEFAULT_CAPACITY = 16;&#10;    private Object[] array;&#10;    private int size;&#10;&#10;    public ArrayList(int capacity) {&#10;        array = new Object[capacity];&#10;    }&#10;&#10;    public ArrayList() {&#10;        this(DEFAULT_CAPACITY);&#10;    }&#10;&#10;    @Override&#10;    public void add(int index, T obj) {&#10;        if (size == array.length) {&#10;            reallocate();&#10;        }&#10;        Object[] tmp_array = {obj};&#10;        Object[] tmp_array_result = new Object[array.length];&#10;&#10;        System.arraycopy(array, 0, tmp_array_result, 0, index);&#10;        System.arraycopy(tmp_array, 0, tmp_array_result, index, 1);&#10;        System.arraycopy(array, index, tmp_array_result, index + 1, array.length - index);&#10;        array = Arrays.copyOf(tmp_array_result, tmp_array_result.length);&#10;        size++;&#10;    }&#10;&#10;    @Override&#10;    public boolean add(T obj) {&#10;        if (size == array.length) {&#10;            reallocate();&#10;        }&#10;        array[size++] = obj;&#10;        return true;&#10;    }&#10;&#10;    @Override&#10;    public T remove(int index) {&#10;        return null;&#10;    }&#10;&#10;    @Override&#10;    public T get(int index) {&#10;        return null;&#10;    }&#10;&#10;    @Override&#10;    public int indexOf(T pattern) {&#10;        return 0;&#10;    }&#10;&#10;    @Override&#10;    public int lastIndexOf(T pattern) {&#10;        return 0;&#10;    }&#10;&#10;    private void reallocate() {&#10;        array = Arrays.copyOf(array, array.length * 2);&#10;    }&#10;&#10;    @Override&#10;    public boolean remove(T pattern) {&#10;        return false;&#10;    }&#10;&#10;    @Override&#10;    public int size() {&#10;        return size;&#10;    }&#10;&#10;    @Override&#10;    public boolean isEmpty() {&#10;        return size == 0;&#10;    }&#10;&#10;    @Override&#10;    public boolean contains(T pattern) {&#10;        return false;&#10;    }&#10;&#10;    @Override&#10;    public Iterator&lt;T&gt; iterator() {&#10;        return null;&#10;    }&#10;&#10;    public Object[] toArray() {&#10;        return Arrays.copyOf(array, size);&#10;    }&#10;}&#10;```&#10;&#10;### Обновление теста&#10;&#10;Теперь вы можете использовать метод `toArray` в вашем тесте:&#10;&#10;```java&#10;import java.util.Arrays;&#10;import static org.junit.jupiter.api.Assertions.*;&#10;&#10;" />
+              <option name="responseTms" value="1724258787309" />
+              <option name="usedLocalFilePaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/CollectionTest.java" />
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/ListTest.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/List.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/ArrayList.java" />
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/ArrayListTest.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/Collection.java" />
+                </list>
+              </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="290399">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="290399" />
+              <option name="initiateTms" value="1724256878136" />
+              <option name="request" value=" Arrays.copyOfRange - как у нас работает это чудо? Массив, которому присваиваю, уже должен существовать и быть инициализированным, или это в процессе операции выполняется? Границы указываются для нового массива или для старого?" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="Метод `Arrays.copyOfRange` в Java используется для копирования диапазона элементов из одного массива в новый массив. Давайте разберем, как он работает и ответим на ваши вопросы.&#10;&#10;### Описание метода `Arrays.copyOfRange`&#10;&#10;Метод `Arrays.copyOfRange` создает новый массив, который содержит копию указанного диапазона из исходного массива. Вот его сигнатура:&#10;&#10;```java&#10;public static &lt;T&gt; T[] copyOfRange(T[] original, int from, int to)&#10;```&#10;&#10;- `original`: исходный массив, из которого копируются элементы.&#10;- `from`: начальный индекс (включительно) диапазона, который нужно скопировать.&#10;- `to`: конечный индекс (исключительно) диапазона, который нужно скопировать.&#10;&#10;### Как работает `Arrays.copyOfRange`&#10;&#10;1. **Создание нового массива**:&#10;   - Метод создает новый массив, который будет содержать элементы из указанного диапазона исходного массива.&#10;   - Новый массив инициализируется внутри метода, и вам не нужно заранее создавать или инициализировать его.&#10;&#10;2. **Копирование элементов**:&#10;   - Элементы из исходного массива копируются в новый массив в пределах указанных границ (`from` включительно и `to` исключительно).&#10;&#10;3. **Возвращаемое значение**:&#10;   - Метод возвращает новый массив, содержащий копию элементов из исходного массива в указанном диапазоне.&#10;&#10;### Пример использования&#10;&#10;```java&#10;public class CopyOfRangeExample {&#10;    public static void main(String[] args) {&#10;        Integer[] originalArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};&#10;        &#10;        // Копируем элементы с индекса 2 (включительно) по индекс 5 (исключ" />
+              <option name="responseTms" value="1724256888737" />
+              <option name="usedLocalFilePaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/ArrayList.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/Collection.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/List.java" />
+                </list>
+              </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="3b9faf">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="3b9faf" />
+              <option name="initiateTms" value="1724257582919" />
+              <option name="request" value=" так, уточняю задачу - мне надо объединение трех массивов, второй из которых состоит из одного элемента" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="Понял, вам нужно объединить три массива, где второй массив состоит из одного элемента. Давайте рассмотрим, как это можно сделать с использованием `System.arraycopy` и стримов.&#10;&#10;### Пример с использованием `System.arraycopy`&#10;&#10;```java&#10;import java.util.Arrays;&#10;&#10;public class MergeThreeArraysExample {&#10;    public static void main(String[] args) {&#10;        int[] array1 = {1, 2, 3};&#10;        int[] array2 = {4}; // массив из одного элемента&#10;        int[] array3 = {5, 6, 7};&#10;        &#10;        int[] mergedArray = new int[array1.length + array2.length + array3.length];&#10;        &#10;        System.arraycopy(array1, 0, mergedArray, 0, array1.length);&#10;        System.arraycopy(array2, 0, mergedArray, array1.length, array2.length);&#10;        System.arraycopy(array3, 0, mergedArray, array1.length + array2.length, array3.length);&#10;        &#10;        System.out.println(&quot;Объединенный массив: &quot; + Arrays.toString(mergedArray)); // Output: [1, 2, 3, 4, 5, 6, 7]&#10;    }&#10;}&#10;```&#10;&#10;### Пример с использованием стримов&#10;&#10;```java&#10;import java.util.Arrays;&#10;import java.util.stream.IntStream;&#10;&#10;public class MergeThreeArraysExample {&#10;    public static void main(String[] args) {&#10;" />
+              <option name="responseTms" value="1724257588214" />
+              <option name="usedLocalFilePaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/ArrayList.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/Collection.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/List.java" />
+                </list>
+              </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="427156">
+          <value>
+            <ChatHistoryModel>
+              <option name="contextFilesPaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/ArrayList.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/List.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/Collection.java" />
+                </list>
+              </option>
+              <option name="id" value="427156" />
+              <option name="initiateTms" value="1724257106117" />
+              <option name="request" value=" кажется, ты не закончил пример использования" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="Извините за прерывание. Вот полный пример использования метода `Arrays.copyOfRange`:&#10;&#10;```java&#10;import java.util.Arrays;&#10;&#10;public class CopyOfRangeExample {&#10;    public static void main(String[] args) {&#10;        Integer[] originalArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};&#10;        &#10;        // Копируем элементы с индекса 2 (включительно) по индекс 5 (исключительно)&#10;        Integer[] newArray = Arrays.copyOfRange(originalArray, 2, 5);&#10;        &#10;        // Выводим новый массив&#10;        System.out.println(Arrays.toString(newArray)); // Output: [3, 4, 5]&#10;    }&#10;}&#10;```&#10;&#10;### Ответы на ваши вопросы&#10;&#10;1. **Массив, которому присваиваю, уже должен существовать и быть инициализированным, или это в процессе операции выполняется?**&#10;   - Новый массив создается и инициализируется внутри метода `Arrays.copyOfRange`. Вам не нужно заранее создавать или инициализировать его. Метод возвращает новый массив, который вы можете присвоить переменной.&#10;&#10;2. **Границы указываются для нового массива или для старого?**&#10;   - Границы (`from` и `to`) указываются для исходного массива. Эти индексы определяют диапазон элементов, которые будут скопированы из исходного массива в новый массив. Индекс `from` включается, а индекс `to` исключается.&#10;&#10;### Дополнительные детали&#10;&#10;- Если `from` равен `to`, метод вернет пустой массив.&#10;- Если `from` больше `to`, метод выбросит `IllegalArgumentException`.&#10;- Если `from` или `to` выходят за пределы исходного массива, метод выбросит `ArrayIndexOutOfBoundsException`.&#10;&#10;### Пример с обработкой исключений&#10;&#10;```java&#10;import java.util.Arrays;&#10;&#10;public class CopyOfRangeExample {&#10;    public static void main(String[] args) {&#10;        Integer[] originalArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};&#10;        &#10;        try {&#10;            // Копируем элементы с индекса 2 (включительно) по индекс 5 (исключительно)&#10;            Integer[] newArray = Arrays.copyOfRange(originalArray, 2, 5);&#10;            System.out.println(Arrays.toString(newArray)); // Output: [3, 4, 5]&#10;            &#10;            // Пример с некорректными границами&#10;            Integer[] invalidArray = Arrays.copyOfRange(originalArray, 5, 2);&#10;        } catch (IllegalArgumentException | ArrayIndexOutOfBoundsException e) {&#10;            System.err.println(&quot;Ошибка копирования массива: &quot; + e.getMessage());&#10;        }&#10;    }&#10;}&#10;```&#10;&#10;Этот пример демонстрирует, как использовать метод `Arrays.copyOfRange` и как обрабатывать возможные исключения." />
+              <option name="responseFileName" value="" />
+              <option name="responseFilePath" value="" />
+              <option name="responseTms" value="1724257114751" />
+              <option name="usedLocalFilePaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/ArrayList.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/Collection.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/List.java" />
+                </list>
+              </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="6dcc50">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="6dcc50" />
+              <option name="initiateTms" value="1724257153926" />
+              <option name="request" value=" прекрасно! а как суммируются массивы?" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="Суммирование массивов в Java может означать несколько разных вещей в зависимости от контекста. Вот несколько распространенных сценариев и соответствующих решений:&#10;&#10;### 1. Суммирование элементов массива&#10;&#10;Если вам нужно найти сумму всех элементов числового массива, вы можете использовать цикл или стримы:&#10;&#10;#### Пример с использованием цикла:&#10;&#10;```java&#10;public class SumArrayExample {&#10;    public static void main(String[] args) {&#10;        int[] array = {1, 2, 3, 4, 5};&#10;        int sum = 0;&#10;        &#10;        for (int num : array) {&#10;            sum += num;&#10;        }&#10;        &#10;        System.out.println(&quot;Сумма элементов массива: &quot; + sum); // Output: 15&#10;    }&#10;}&#10;```&#10;&#10;#### Пример с использованием стримов:&#10;&#10;```java&#10;import java.util.Arrays;&#10;&#10;public class SumArrayExample {&#10;    public static void main(String[] args) {&#10;        int[] array = {1, 2, 3, 4, 5};&#10;        int sum = Arrays.stream(array).sum();&#10;        &#10;        System.out.println(&quot;Сумма элементов массива: &quot; + sum); // Output: 15&#10;    }&#10;}&#10;```&#10;&#10;### 2. Объединение двух массивов&#10;&#10;Если вам нужно объединить два массива в один, вы можете использовать метод `System.arraycopy` или стримы:&#10;&#10;#### Пример с использованием `System.arraycopy`:&#10;&#10;```java&#10;import java.util.Arrays;&#10;&#10;public class MergeArraysExample {&#10;    public static void main(String[] args) {&#10;        int[] array1 = {1, 2, 3};&#10;        int[] array2 = {4, 5, 6};&#10;        &#10;        int[] mergedArray = new int[array1.length + array2.length];&#10;        &#10;        System.arraycopy(array1, 0, mergedArray, 0, array1.length);&#10;        System.arraycopy(array2, 0, mergedArray, array1.length, array2.length);&#10;        &#10;        System.out.println(&quot;Объединенный массив: &quot; + Arrays.toString(mergedArray)); // Output: [1, 2, 3, 4, 5, 6]&#10;    }&#10;}&#10;```&#10;&#10;#### Пример с использованием стримов:&#10;&#10;```java&#10;import java.util.Arrays;&#10;import java.util.stream.IntStream;&#10;&#10;public class MergeArraysExample {&#10;    public static void main(String[] args) {&#10;        int[] array1 = {1, 2, 3};&#10;        int[] array2 = {4, 5, 6};&#10;        &#10;        int[] mergedArray = IntStream.concat(Arrays.stream(array1), Arrays.stream(array2)).toArray();&#10;        &#10;        System.out.println(&quot;Объединенный массив: &quot; + Arrays.toString(mergedArray)); // Output: [1, 2, 3, 4, 5, 6]&#10;    }&#10;}&#10;```&#10;&#10;### 3. Поэлементное суммирование двух массивов&#10;&#10;Если вам нужно сложить элементы двух массивов поэлементно, вы можете использовать цикл:&#10;&#10;```java&#10;import java.util.Arrays;&#10;&#10;public class ElementwiseSumExample {&#10;    public static void main(String[] args) {&#10;        int[] array1 = {1, 2, 3};&#10;        int[] array2 = {4, 5, 6};&#10;        &#10;        if (array1.length != array2.length) {&#10;            throw new IllegalArgumentException(&quot;Массивы должны быть одинаковой длины&quot;);&#10;        }&#10;        &#10;        int[] sumArray" />
+              <option name="responseTms" value="1724257169789" />
+              <option name="usedLocalFilePaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/ArrayList.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/Collection.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/List.java" />
+                </list>
+              </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="c353b9">
+          <value>
+            <ChatHistoryModel>
+              <option name="contextFilesPaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/ArrayListTest.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/ArrayList.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/List.java" />
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/ListTest.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/Collection.java" />
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/CollectionTest.java" />
+                </list>
+              </option>
+              <option name="id" value="c353b9" />
+              <option name="initiateTms" value="1724258895251" />
+              <option name="request" value=" Полная ерунда!&#10;        ArrayList test = new ArrayList(10);&#10;        System.out.println(Arrays.toString(test.toArray()));&#10;        test.add(src);&#10;        System.out.println(Arrays.toString(test.toArray()));&#10;и на выходе        &#10;[]&#10;[[Ljava.lang.String;@40f08448]" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="Извините за путаницу. Давайте исправим это. Проблема в том, что вы добавляете массив `src` как один элемент в `ArrayList`, а не элементы массива по отдельности. Также, метод `toArray` должен возвращать массив типа `T[]`, а не `Object[]`.&#10;&#10;### Исправление класса `ArrayList`&#10;&#10;1. Обновим метод `toArray` в классе `ArrayList`:&#10;&#10;```java&#10;import java.util.Arrays;&#10;import java.util.Iterator;&#10;&#10;public class ArrayList&lt;T&gt; implements List&lt;T&gt; {&#10;    private static final int DEFAULT_CAPACITY = 16;&#10;    private Object[] array;&#10;    private int size;&#10;&#10;    public ArrayList(int capacity) {&#10;        array = new Object[capacity];&#10;    }&#10;&#10;    public ArrayList() {&#10;        this(DEFAULT_CAPACITY);&#10;    }&#10;&#10;    @Override&#10;    public void add(int index, T obj) {&#10;        if (size == array.length) {&#10;            reallocate();&#10;        }&#10;        System.arraycopy(array, index, array, index + 1, size - index);&#10;        array[index] = obj;&#10;        size++;&#10;    }&#10;&#10;    @Override&#10;    public boolean add(T obj) {&#10;        if (size == array.length) {&#10;            reallocate();&#10;        }&#10;        array[size++] = obj;&#10;        return true;&#10;    }&#10;&#10;    @Override&#10;    public T remove(int index) {&#10;        if (index &lt; 0 || index &gt;= size) {&#10;            throw new IndexOutOfBoundsException(&quot;Index: &quot; + index + &quot;, Size: &quot; + size);&#10;        }&#10;        T oldValue = (T) array[index];&#10;        int numMoved = size - index - 1;&#10;        if (numMoved &gt; 0) {&#10;            System.arraycopy(array, index + 1, array, index, numMoved);&#10;        }&#10;        array[--size] = null; // clear to let GC do its work&#10;        return oldValue;&#10;    }&#10;&#10;    @Override&#10;    public T get(int index) {&#10;        if (index &lt; 0 || index &gt;= size) {&#10;            throw new IndexOutOfBoundsException(&quot;Index: &quot; + index + &quot;, Size: &quot; + size);&#10;        }&#10;        return (T) array[index];&#10;    }&#10;&#10;    @Override&#10;    public int indexOf(T pattern) {&#10;        for (int i = 0; i &lt; size; i++) {&#10;            if (pattern.equals(array[i])) {&#10;                return i;&#10;            }&#10;        }&#10;        return -1;&#10;    }&#10;&#10;    @Override&#10;    public int lastIndexOf(T pattern) {&#10;        for (int i = size - 1; i &gt;= 0; i--) {&#10;            if (pattern.equals(array[i])) {&#10;                return i;&#10;            }&#10;        }&#10;        return -1;&#10;    }&#10;&#10;    private void reallocate() {&#10;        array = Arrays.copyOf(array, array.length * 2);&#10;    }&#10;&#10;    @Override&#10;    public boolean remove(T pattern) {&#10;        int index = indexOf(pattern);&#10;        if (index == -1) {&#10;            return false;&#10;        }&#10;        remove(index);&#10;        return true;&#10;    }&#10;&#10;    @Override&#10;    public int size() {&#10;        return size;&#10;    }&#10;&#10;    @Override&#10;    public boolean isEmpty() {&#10;        return size == 0;&#10;    }&#10;&#10;    @Override&#10;    public boolean contains(T pattern) {&#10;        return indexOf(pattern) &gt;= 0;&#10;    }&#10;&#10;    @Override&#10;    public Iterator&lt;T&gt; iterator() {&#10;        return new Iterator&lt;T&gt;() {&#10;            private int currentIndex = 0;&#10;&#10;            @Override&#10;            public boolean hasNext() {&#10;                return currentIndex &lt; size &amp;&amp; array[currentIndex] != null;&#10;            }&#10;&#10;            @Override&#10;            public T next() {&#10;                return (T) array[currentIndex++];&#10;            }&#10;        };&#10;    }&#10;&#10;    @SuppressWarnings(&quot;unchecked&quot;)&#10;    public T[] toArray() {&#10;        return (T[]) Arrays.copyOf(array, size, array.getClass());&#10;    }&#10;}&#10;```&#10;&#10;### Обновление теста&#10;&#10;Теперь обновим ваш тест, чтобы он добавлял элементы массива по отдельности:&#10;&#10;```java&#10;import java.util.Arrays;&#10;import static org.junit.jupiter.api.Assertions.*;&#10;&#10;import org.junit.jupiter.api.BeforeEach;&#10;import org.junit.jupiter.api.Test;&#10;&#10;public class ArrayListTest extends ListTest {&#10;    @BeforeEach&#10;    @Override&#10;    void setUp() {&#10;        collection = new ArrayList&lt;&gt;(3);&#10;        super.setUp();&#10;    }&#10;&#10;    @Test&#10;    void addLastTest() {&#10;        // ваш тест&#10;    }&#10;&#10;    @Test&#10;    void addByIndexTest() {&#10;        String[] src = new String[] {&quot;one&quot;, &quot;two&quot;, &quot;three&quot;};&#10;        String[] expected = new String[] {&quot;one&quot;, &quot;two&quot;, &quot;OK&quot;, &quot;three&quot;};&#10;&#10;        ArrayList&lt;String&gt; test = new ArrayList&lt;&gt;(10);&#10;        System.out.println(Arrays.toString(test.toArray())); // Output: []&#10;        &#10;        for (String s : src) {&#10;            test.add(s);&#10;        }&#10;        System.out.println(Arrays.toString(test.toArray())); // Output: [one, two, three]&#10;        &#10;        test.add(2, &quot;OK&quot;);&#10;        System.out.println(Arrays.toString(test.toArray())); // Output: [one, two, OK, three]&#10;    }&#10;}&#10;```&#10;&#10;### Объяснение&#10;&#10;- Метод `toArray` теперь возвращает массив типа `T[]`, что позволяет корректно выводить содержимое массива.&#10;- В тесте элементы массива `src` добавляются по отдельности с помощью цикла `for`, что позволяет корректно добавлять их в `ArrayList`.&#10;- Метод `add(int index, T obj)` был исправлен для корректного добавления элемента по индексу.&#10;&#10;Теперь вывод будет содержать значения массива, а не ссылки на объекты." />
+              <option name="responseFileName" value="" />
+              <option name="responseFilePath" value="" />
+              <option name="responseTms" value="1724258914800" />
+              <option name="usedLocalFilePaths">
+                <list>
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/CollectionTest.java" />
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/ListTest.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/ArrayList.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/List.java" />
+                  <option value="$PROJECT_DIR$/src/test/java/telran/util/ArrayListTest.java" />
+                  <option value="$PROJECT_DIR$/src/main/java/telran/util/Collection.java" />
+                </list>
+              </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="d11237">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="d11237" />
+              <option name="initiateTms" value="1724158205880" />
+              <option name="request" value=" а если .gitignore нет в этом разделе - но система его вставляет (значит, откуда-то берет)?" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="Если `.gitignore` не отображается в разделе `File and Code Templates`, но IntelliJ IDEA все равно вставляет его при создании проекта, это может означать, что шаблон `.gitignore` берется из другого места. В IntelliJ IDEA есть несколько возможных источников для таких шаблонов:&#10;&#10;1. **Шаблоны проектов**:&#10;   - IntelliJ IDEA может использовать встроенные шаблоны для различных типов проектов (например, Maven, Gradle и т.д.). Эти шаблоны могут включать `.gitignore`.&#10;&#10;2. **Плагины**:&#10;   - Некоторые плагины могут добавлять свои собственные шаблоны `.gitignore`. Например, плагин для работы с Git может включать шаблон `.gitignore`.&#10;&#10;3. **Шаблоны из репозиториев**:&#10;   - IntelliJ IDEA может использовать шаблоны из репозиториев, таких как GitHub, для создания `.gitignore` файлов.&#10;&#10;Чтобы найти и отредактировать этот шаблон, можно попробовать следующие шаги:&#10;&#10;### 1. Проверка шаблонов проектов&#10;&#10;1. **Создайте новый проект**:&#10;   - Создайте новый проект в IntelliJ IDEA и обратите внимание на тип проекта (например, Maven, Gradle и т.д.).&#10;&#10;2. **Проверьте настройки проекта**:&#10;   - В настройках проекта (например, в настройках Maven или Gradle) могут быть указаны шаблоны, которые используются при создании проекта.&#10;&#10;### 2. Проверка плагинов&#10;&#10;1. **Откройте настройки IntelliJ IDEA**:&#10;   - На Windows/Linux: `File` &gt; `Settings`&#10;   - На macOS: `IntelliJ IDEA` &gt; `Preferences`&#10;&#10;2. **Перейдите в раздел `Plugins`**:&#10;   - В окне настроек перейдите в раздел `Plugins` и проверьте установленные плагины, которые могут добавлять шаблоны `.gitignore`.&#10;&#10;### 3. Проверка репозиториев&#10;&#10;1. **Проверьте настройки VCS**:&#10;   - В настройках VCS (Version Control System) могут быть указаны шаблоны `.gitignore`, которые используются при инициализации репозитория.&#10;&#10;### 4. Ручное добавление шаблона&#10;&#10;Если ни один из вышеуказанных методов не помог, вы можете вручную создать шаблон `.gitignore` и использовать его при создании новых проектов:&#10;&#10;1. **Создайте файл `.gitignore`**:&#10;   - Создайте файл `.gitignore` с нужными правилами в удобном для вас месте.&#10;&#10;2. **Скопируйте файл в новый проект**:&#10;   - При создании нового проекта вручную скопируйте файл `.gitignore` в корневую директорию проекта.&#10;&#10;### 5. Использование глобального `.gitignore`&#10;&#10;Вы также можете настроить глобальный `.gitignore`, который будет применяться ко всем вашим проектам:&#10;&#10;1. **Создайте глобальный `.gitignore`**:&#10;   - Создайте файл `.gitignore` в домашней директории пользователя (например, `~/.gitignore_global`).&#10;&#10;2. **Настройте Git использовать глобальный `.gitignore`**:&#10;   - Выполните команду:&#10;     ```sh&#10;     git config --global core.excludesfile ~/.gitignore_global&#10;     ```&#10;&#10;Теперь Git будет использовать этот глобальный `.gitignore` для всех ваших проектов." />
+              <option name="responseFileName" value="" />
+              <option name="responseFilePath" value="" />
+              <option name="responseTms" value="1724158216188" />
+            </ChatHistoryModel>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
