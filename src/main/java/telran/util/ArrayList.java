@@ -47,6 +47,9 @@ public class ArrayList<T> implements List<T>
 
     @Override
     public T get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
         return (T) array[index];
     }
 
