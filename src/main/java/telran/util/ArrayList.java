@@ -47,7 +47,7 @@ public class ArrayList<T> implements List<T>
 
     @Override
     public T get(int index) {
-        return null;
+        return (T) array[index];
     }
 
     @Override

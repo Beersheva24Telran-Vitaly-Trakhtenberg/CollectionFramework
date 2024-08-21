@@ -10,12 +10,20 @@ import telran.util.ArrayList;
 
 public class ArrayListTest extends ListTest
 {
+    ArrayList<String> test;
+
     @BeforeEach
     @Override
     void setUp()
     {
+        String[] src = new String[] {"one", "two", "three"};
+
         collection = new ArrayList<>(3);
         super.setUp();
+        test = new ArrayList<>(10);
+        for (String s : src) {
+            test.add(s);
+        }
     }
 
     @Test
@@ -25,15 +33,11 @@ public class ArrayListTest extends ListTest
     }
 
     @Test
-    void addByIndexTest()
+    void addsTest()
     {
         String[] src = new String[] {"one", "two", "three"};
         String[] expected = new String[] {"one", "two", "OK", "three"};
 
-        ArrayList test = new ArrayList(10);
-        for (String s : src) {
-            test.add(s);
-        }
         assertArrayEquals(src, test.toArray());
         //System.out.println(Arrays.toString(test.toArray()));
 
@@ -42,4 +46,9 @@ public class ArrayListTest extends ListTest
         //System.out.println(Arrays.toString(test.toArray()));
     }
 
+    @Test
+    void getTest()
+    {
+        assertEquals("two", test.get(1));
+    }
 }
