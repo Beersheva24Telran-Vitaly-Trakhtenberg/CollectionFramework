@@ -51,4 +51,14 @@ public class ArrayListTest extends ListTest
     {
         assertEquals("two", test.get(1));
     }
+
+    @Test
+    void removeTest()
+    {
+        String[] expected = new String[] {"one", "three"};
+
+        String removed = test.remove(1);
+        assertEquals("two", removed);
+        assertArrayEquals(expected, test.toArray());
+    }
 }

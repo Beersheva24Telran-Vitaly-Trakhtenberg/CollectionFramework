@@ -42,7 +42,17 @@ public class ArrayList<T> implements List<T>
 
     @Override
     public T remove(int index) {
-        return null;
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
+        T removed_value = (T) array[index];
+        int num_moved = size - index - 1;
+
+        if (num_moved > 0) {
+            System.arraycopy(array, index + 1, array, index, num_moved);
+        }
+        array[--size] = null; // clear to let GC do its work
+        return removed_value;
     }
 
     @Override
