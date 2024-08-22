@@ -43,27 +43,37 @@ public class ArrayList<T> implements List<T>
     @Override
     public T remove(int index)
     {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
-        }
-        T removed_value = (T) array[index];
-        int num_moved = size - index - 1;
+        checkIndex(index, false);
+        T res = (T)array[index];
+        size--;
+        System.arraycopy(array, index + 1, array, index, size - index);
+        return res;
+    }
 
-        if (num_moved > 0) {
-            System.arraycopy(array, index + 1, array, index, num_moved);
+    private void checkIndex(int index, boolean sizeInclusive) {
+        int limit = sizeInclusive ? size : size - 1;
+        if (index < 0 || index > limit) {
+            throw new IndexOutOfBoundsException(index);
         }
-        array[--size] = null; // clear to let GC do its work
-        return removed_value;
     }
 
     @Override
     public boolean remove(T pattern)
     {
+/*
         int index = indexOf(pattern);
         if (index > -1) {
             remove(index);
         }
         return index > -1;
+*/
+        boolean res = false;
+        int index = indexOf(pattern);
+        if (index >= 0) {
+            res = true;
+            remove(index);
+        }
+        return res;
     }
 
     @Override
