@@ -2,6 +2,7 @@ package telran.util;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.Objects;
 
 public class ArrayList<T> implements List<T>
 {
@@ -77,27 +78,21 @@ public class ArrayList<T> implements List<T>
     @Override
     public int indexOf(T pattern)
     {
-        int res = -1;
-        for (int i = 0; i < size; i++) {
-            if (pattern.equals(array[i])) {
-                res = i;
-                break;
-            }
+        int index = 0;
+        while(index < size && !Objects.equals(array[index], pattern)) {
+            index++;
         }
-        return res;
+        return index == size ? -1 : index;
     }
 
     @Override
     public int lastIndexOf(T pattern)
     {
-        int res = -1;
-        for (int i = size-1; i >= 0; i--) {
-            if (pattern.equals(array[i])) {
-                res = i;
-                break;
-            }
+        int index = size - 1;
+        while(index >= 0 && !Objects.equals(array[index], pattern)) {
+            index--;
         }
-        return res;
+        return index;
     }
 
     private void reallocate()
