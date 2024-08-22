@@ -60,13 +60,12 @@ public class ArrayList<T> implements List<T>
     @Override
     public boolean remove(T pattern)
     {
-/*
         int index = indexOf(pattern);
         if (index > -1) {
             remove(index);
         }
         return index > -1;
-*/
+/*
         boolean res = false;
         int index = indexOf(pattern);
         if (index >= 0) {
@@ -74,6 +73,7 @@ public class ArrayList<T> implements List<T>
             remove(index);
         }
         return res;
+*/
     }
 
     @Override
