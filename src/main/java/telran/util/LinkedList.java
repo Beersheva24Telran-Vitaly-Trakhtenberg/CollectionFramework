@@ -145,7 +145,7 @@ public class LinkedList<T> implements List<T>
         if (nodeAfter != null) {
             nodeAfter.prev = nodeBefore;
         }
-        clearGarrbage(removedNode, false);
+        clearGarrbage(removedNode);
     }
 
     private void removeTail()
@@ -160,7 +160,7 @@ public class LinkedList<T> implements List<T>
         } else {
             head = null;
         }
-        clearGarrbage(old_tail, false);
+        clearGarrbage(old_tail);
     }
 
     private void removeHead()
@@ -174,16 +174,14 @@ public class LinkedList<T> implements List<T>
             node.next = head;
             head = node;
         }
-        clearGarrbage(old_head, false);
+        clearGarrbage(old_head);
     }
 
-    private void clearGarrbage(Node<T> obj, boolean clear_obj)
+    private void clearGarrbage(Node<T> obj)
     {
         obj.next = null;
         obj.prev = null;
-        if (clear_obj) {
-            obj.obj = null;
-        }
+        obj.obj = null;
     }
 
     @Override
@@ -199,9 +197,10 @@ public class LinkedList<T> implements List<T>
         checkIndex(index, true);
 
         Node<T> removed_node = getNode(index);
+        T removedData = removed_node.obj;
         removeNode(index);
         size--;
-        return removed_node.obj;
+        return removedData;
     }
 
     @Override
