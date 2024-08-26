@@ -84,13 +84,6 @@ public class LinkedList<T> implements List<T>
 
     private void addNode(Node<T> node, int index)
     {
-/*
-        switch(index) {
-            case 0 -> addHead(node);
-            case size -> addTail(node);     // FixMe Needs to be constant, not a variable
-            default -> addMiddle(node);
-        }
-*/
         if (index == 0) {
             addHead(node);
         } else if (index == size) {
