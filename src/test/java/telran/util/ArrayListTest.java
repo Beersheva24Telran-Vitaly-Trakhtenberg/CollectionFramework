@@ -1,14 +1,11 @@
 package telran.util;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import telran.util.ArrayList;
 
 public class ArrayListTest extends ListTest
 {
