@@ -193,18 +193,20 @@ public class LinkedList<T> implements List<T>
     }
 
     @Override
-    public T remove(int index) {
+    public T remove(int index)
+    {
         checkIndex(index, true);
 
         Node<T> removed_node = getNode(index);
-        T removedData = removed_node.obj;
+        T removed_data = removed_node.obj;
         removeNode(index);
         size--;
-        return removedData;
+        return removed_data;
     }
 
     @Override
-    public T get(int index) {
+    public T get(int index)
+    {
         checkIndex(index, false);
         return getNode(index).obj;
     }
@@ -260,7 +262,8 @@ public class LinkedList<T> implements List<T>
     }
 
     @Override
-    public boolean contains(T pattern) {
+    public boolean contains(T pattern)
+    {
         return indexOf(pattern) > -1;
     }
 
