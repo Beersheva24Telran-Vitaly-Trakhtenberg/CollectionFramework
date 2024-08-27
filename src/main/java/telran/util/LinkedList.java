@@ -19,7 +19,7 @@ public class LinkedList<T> implements List<T>
     private class LinkedListIterator implements Iterator<T>
     {
         private Node<T> current = head;
-
+        private Node<T> lastReturned = null;
         /**
          * Returns {@code true} if the iteration has more elements.
          * (In other words, returns {@code true} if {@link #next} would
@@ -43,9 +43,37 @@ public class LinkedList<T> implements List<T>
             if (!hasNext()) {
                 throw new NoSuchElementException();
             }
+            lastReturned = current;
             T data = current.obj;
             current = current.next;
             return data;
+        }
+        @Override
+        public void remove() {
+            if (lastReturned == null) {
+                throw new IllegalStateException("next() has not been called or remove() has already been called after the last call to next()");
+            }
+
+            Node<T> prev = lastReturned.prev;
+            Node<T> next = lastReturned.next;
+
+            if (prev != null) {
+                prev.next = next;
+            } else {
+                head = next;
+            }
+
+            if (next != null) {
+                next.prev = prev;
+            } else {
+                tail = prev;
+            }
+
+            lastReturned.obj = null;
+            lastReturned.prev = null;
+            lastReturned.next = null;
+            lastReturned = null;
+            size--;
         }
     }
     private Node<T> head;
@@ -131,7 +159,7 @@ public class LinkedList<T> implements List<T>
         } else {
             removeMiddle(index);
         }
-        size++;
+        size--;
     }
 
     private void removeMiddle(int index)
@@ -200,7 +228,7 @@ public class LinkedList<T> implements List<T>
         Node<T> removed_node = getNode(index);
         T removed_data = removed_node.obj;
         removeNode(index);
-        size--;
+
         return removed_data;
     }
 
