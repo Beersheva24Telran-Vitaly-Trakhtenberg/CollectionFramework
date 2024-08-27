@@ -1,11 +1,14 @@
 package telran.util;
 
 import java.util.Iterator;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 public class ArrayListTest extends ListTest
 {
@@ -115,5 +118,34 @@ public class ArrayListTest extends ListTest
         assertEquals(15, iterator1.next());
         assertTrue(iterator1.hasNext());
         assertEquals(-10, iterator1.next());
+    }
+
+    @Test
+    @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
+    void removeIfTest()
+    {
+        int items_number = 1000000;
+        ArrayList<Integer> testInt = new ArrayList<>(items_number);
+        for (int i=0; i<items_number; i++) {
+            testInt.add(items_number - i);
+        }
+
+        Predicate<Integer> predicate = item -> item % 3 == 0;
+        boolean res = testInt.removeIf(predicate);
+    }
+
+    @Test
+    @Timeout(value = 300, unit = TimeUnit.SECONDS)
+    void removeIfTimingTest()
+    {
+        int items_number = 100000;
+        ArrayList<Integer> testInt = new ArrayList<>(items_number);
+        for (int i=0; i<items_number; i++) {
+            testInt.add(items_number - i);
+        }
+
+        Predicate<Integer> predicate = item -> item % 3 == 0;
+        double time = ArrayList.getTime(() -> testInt.removeIf(predicate));
+        System.out.println("Average execution time: " + time + " ns");
     }
 }

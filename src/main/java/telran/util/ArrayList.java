@@ -2,7 +2,10 @@ package telran.util;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Objects;
+import java.util.function.Predicate;
+@SuppressWarnings("unchecked")
 
 public class ArrayList<T> implements List<T>
 {
@@ -65,15 +68,6 @@ public class ArrayList<T> implements List<T>
             remove(index);
         }
         return index > -1;
-/*
-        boolean res = false;
-        int index = indexOf(pattern);
-        if (index >= 0) {
-            res = true;
-            remove(index);
-        }
-        return res;
-*/
     }
 
     @Override
@@ -103,6 +97,51 @@ public class ArrayList<T> implements List<T>
             index--;
         }
         return index;
+    }
+
+    @Override
+    public boolean removeIf(Predicate<T> predicate)
+    {
+        //TODO
+        //algorithm complexity O[N]
+        //hint: two indices and going throught one array
+        int write_index = -1;
+        boolean removed = false;
+        for (int read_index=0; read_index<size; read_index++) {
+            if (!predicate.test((T) array[read_index])) {
+                array[++write_index] = array[read_index];
+            }
+        }
+        if (write_index > -1) {
+            for (int i = write_index; i < size; i++) {
+                array[i] = null;
+            }
+            size = write_index;
+        }
+        return write_index > -1;
+    }
+
+    public static double getTime(Runnable testMethod) {
+        for (int i = 0; i < 20; i ++) { //прогрев JVM
+            testMethod.run();
+        }
+        int count = 10;
+
+        while(true) {
+            long begin =  System.nanoTime();
+
+            for (int i = 0; i < count; i ++)
+                testMethod.run();
+
+            long end = System.nanoTime();
+
+            if ((end - begin) < 1000000000) {
+                count *= 100000;
+                continue;
+            }
+
+            return (double)(end - begin) / count;
+        }
     }
 
     private void reallocate()
@@ -141,23 +180,41 @@ public class ArrayList<T> implements List<T>
     @Override
     public Iterator<T> iterator()
     {
-        return new Iterator<T>() {
-            private int current = 0;
-
-            @Override
-            public boolean hasNext() {
-                return current < size && array[current] != null;
-            }
-
-            @Override
-            public T next() {
-                return (T) array[current++];
-            }
-        };
+        return new ArrayListIterator();
     }
 
     public T[] toArray()
     {
         return (T[]) Arrays.copyOf(array, size, array.getClass());
+    }
+
+/*
+CW & HW 22
+ */
+    private class ArrayListIterator implements Iterator<T> {
+        int currentIndex = 0;
+        private boolean flNext = false;
+        @Override
+        public boolean hasNext() {
+            flNext = true;
+            return currentIndex < size;
+        }
+
+        @Override
+        public T next() {
+            if(!hasNext()) {
+                throw new NoSuchElementException();
+            }
+            return (T) array[currentIndex++];
+        }
+
+        @Override
+        public void remove() {
+            if(!flNext) {
+                throw new IllegalStateException();
+            }
+            ArrayList.this.remove(--currentIndex);
+            flNext = false;
+        }
     }
 }
