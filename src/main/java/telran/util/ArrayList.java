@@ -102,13 +102,10 @@ public class ArrayList<T> implements List<T>
     @Override
     public boolean removeIf(Predicate<T> predicate)
     {
-        //TODO
-        //algorithm complexity O[N]
-        //hint: two indices and going throught one array
         int write_index = -1;
-        boolean removed = false;
+        predicate = predicate.negate();
         for (int read_index=0; read_index<size; read_index++) {
-            if (!predicate.test((T) array[read_index])) {
+            if (predicate.test((T) array[read_index])) {
                 array[++write_index] = array[read_index];
             }
         }
@@ -122,7 +119,7 @@ public class ArrayList<T> implements List<T>
     }
 
     public static double getTime(Runnable testMethod) {
-        for (int i = 0; i < 20; i ++) { //прогрев JVM
+        for (int i = 0; i < 20; i ++) {
             testMethod.run();
         }
         int count = 10;
