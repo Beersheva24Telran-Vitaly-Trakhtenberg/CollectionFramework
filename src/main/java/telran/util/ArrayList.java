@@ -103,19 +103,19 @@ public class ArrayList<T> implements List<T>
     public boolean removeIf(Predicate<T> predicate)
     {
         int write_index = -1;
-        predicate = predicate.negate();
-        for (int read_index=0; read_index<size; read_index++) {
-            if (predicate.test((T) array[read_index])) {
+        Predicate<T> negated_predicate = predicate.negate();
+        for (int read_index = 0; read_index < size; read_index++) {
+            if (negated_predicate.test((T) array[read_index])) {
                 array[++write_index] = array[read_index];
             }
         }
-        if (write_index > -1) {
-            for (int i = write_index; i < size; i++) {
-                array[i] = null;
-            }
-            size = write_index;
+        for (int i = write_index; i < size; i++) {
+            array[i] = null;
         }
-        return write_index > -1;
+        size = write_index;
+
+        boolean res = write_index < size;
+        return res;
     }
 
     public static double getTime(Runnable testMethod) {
