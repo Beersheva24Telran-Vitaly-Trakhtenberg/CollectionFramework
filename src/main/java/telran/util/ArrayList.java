@@ -102,11 +102,11 @@ public class ArrayList<T> implements List<T>
     @Override
     public boolean removeIf(Predicate<T> predicate)
     {
-        int write_index = -1;
+        int write_index = 0;
         Predicate<T> negated_predicate = predicate.negate();
         for (int read_index = 0; read_index < size; read_index++) {
             if (negated_predicate.test((T) array[read_index])) {
-                array[++write_index] = array[read_index];
+                array[write_index++] = array[read_index];
             }
         }
         for (int i = write_index; i < size; i++) {
