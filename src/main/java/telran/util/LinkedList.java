@@ -19,7 +19,7 @@ public class LinkedList<T> implements List<T>
     private class LinkedListIterator implements Iterator<T>
     {
         private Node<T> current = head;
-        private Node<T> lastReturned = null;
+        private Node<T> last_returned = null;
         /**
          * Returns {@code true} if the iteration has more elements.
          * (In other words, returns {@code true} if {@link #next} would
@@ -43,19 +43,19 @@ public class LinkedList<T> implements List<T>
             if (!hasNext()) {
                 throw new NoSuchElementException();
             }
-            lastReturned = current;
+            last_returned = current;
             T data = current.obj;
             current = current.next;
             return data;
         }
         @Override
         public void remove() {
-            if (lastReturned == null) {
+            if (last_returned == null) {
                 throw new IllegalStateException("next() has not been called or remove() has already been called after the last call to next()");
             }
 
-            Node<T> prev = lastReturned.prev;
-            Node<T> next = lastReturned.next;
+            Node<T> prev = last_returned.prev;
+            Node<T> next = last_returned.next;
 
             if (prev != null) {
                 prev.next = next;
@@ -69,10 +69,10 @@ public class LinkedList<T> implements List<T>
                 tail = prev;
             }
 
-            lastReturned.obj = null;
-            lastReturned.prev = null;
-            lastReturned.next = null;
-            lastReturned = null;
+            last_returned.obj = null;
+            last_returned.prev = null;
+            last_returned.next = null;
+            last_returned = null;
             size--;
         }
     }
