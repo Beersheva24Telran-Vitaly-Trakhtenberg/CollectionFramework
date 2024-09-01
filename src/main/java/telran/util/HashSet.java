@@ -150,12 +150,13 @@ public class HashSet<T> implements Set<T> {
     @Override
     public T get(Object pattern)
     {
-        int index = getIndex((T)pattern, hash_table.length);
+        T t_pattern = (T) pattern;
+        int index = getIndex(t_pattern, hash_table.length);
         List<T> list = hash_table[index];
 
         T res = null;
         if (list != null) {
-            int list_index = list.indexOf((T)pattern);
+            int list_index = list.indexOf(t_pattern);
             if (list_index != -1) {
                 res = list.get(list_index);
             }
