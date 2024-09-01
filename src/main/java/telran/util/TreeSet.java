@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 public class TreeSet<T> implements Set<T>
 {
     private Node<T> root;
-    private Comparator<T> comparator;
+    private final Comparator<T> comparator;
     private int size = 0;
 
     public TreeSet(Comparator<T> comparator)
@@ -61,20 +61,11 @@ public class TreeSet<T> implements Set<T>
 
         Node<T> removed_node = this.getParentOrNode(pattern);
         if (removed_node != null) {
-            Node<T> tmp_parent = removed_node.parent;
             Node<T> tmp_left = removed_node.left;
             Node<T> tmp_right = removed_node.right;
             if (tmp_left == null && tmp_right == null) {
                 replaceNodeInParent(removed_node, null);
                 res = true;
-/*
-                if(comparator.compare(removed_node.obj, tmp_parent.obj) > 0) {
-                    tmp_parent.right = null;
-                } else {
-                    tmp_parent.left = null;
-                }
-                removed_node.obj = null;
-*/
             } else if (tmp_left != null && tmp_right != null) {
                 Node<T> node_successor = findMin(removed_node.right);
                 removed_node.obj = node_successor.obj;
@@ -183,7 +174,7 @@ public class TreeSet<T> implements Set<T>
 
     private class TreeSetIterator implements Iterator<T>
     {
-        private Stack<Node<T>> stack = new Stack<>();
+        private final Stack<Node<T>> stack = new Stack<>();
         private Node<T> current;
         private Node<T> last_returned;
 
@@ -249,13 +240,10 @@ public class TreeSet<T> implements Set<T>
 
     private Node<T> getParentOrNode(T pattern) {
         Node<T> current = root;
-        Node<T> parent = null;
         int compRes;
         while(current != null && (compRes = comparator.compare(pattern, current.obj)) != 0) {
-            parent = current;
             current = compRes > 0 ? current.right : current.left;
         }
-        //return current == null ? parent : current;
         return current;
     }
 
@@ -271,11 +259,6 @@ public class TreeSet<T> implements Set<T>
     }
 
     private Node<T> getParent(T pattern) {
-/*
-        Node<T> res = getParentOrNode(pattern);
-        int compRes = res == null ? 0 : comparator.compare(pattern, res.obj);
-        return compRes == 0 ? null : res;
-*/
         Node<T> current = root;
         Node<T> parent = null;
         int compRes;

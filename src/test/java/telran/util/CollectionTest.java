@@ -130,14 +130,12 @@ public abstract class CollectionTest {
     @Test
     @Timeout(value = 300, unit = TimeUnit.SECONDS)
     void performanceTest() {
-/*
         collection.clear();
         IntStream.range(0, N_ELEMENTS).forEach(i -> collection.add(random.nextInt()));
         collection.removeIf(n -> n % 2 == 0);
         assertTrue(collection.stream().allMatch(n -> n % 2 != 0));
         collection.clear();
         assertTrue(collection.isEmpty());
-*/
     }
 
 }
