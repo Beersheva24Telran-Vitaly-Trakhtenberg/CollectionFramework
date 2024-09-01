@@ -3,7 +3,6 @@ package telran.util;
 import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Random;
