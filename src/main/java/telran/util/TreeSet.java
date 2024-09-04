@@ -28,16 +28,32 @@ public class TreeSet<T> implements Set<T>
 
     @Override
     public boolean removeIf(Predicate<T> predicate) {
-        return Set.super.removeIf(predicate);
+        //return Set.super.removeIf(predicate);
+        System.out.println("Removing elements with predicate");
+        boolean removed = false;
+        Iterator<T> it = iterator();
+        while (it.hasNext()) {
+            T obj = it.next();
+            System.out.println("Checking element: " + obj);
+            if (predicate.test(obj)) {
+                System.out.println("Removing element: " + obj);
+                it.remove();
+                removed = true;
+            }
+        }
+        System.out.println("Finished removing elements with predicate");
+        return removed;
     }
 
     @Override
-    public void clear() {
+    public void clear()
+    {
         Set.super.clear();
     }
 
     @Override
-    public boolean add(T obj) {
+    public boolean add(T obj)
+    {
         boolean res = false;
 
         if (!contains(obj)) {
@@ -49,18 +65,20 @@ public class TreeSet<T> implements Set<T>
                 addAfterParent(node);
             }
             size++;
-
         }
+
         return res;
     }
 
     @Override
     public boolean remove(T pattern)
     {
+        System.out.println("Trying to remove element: " + pattern);
         boolean res = false;
 
         Node<T> removed_node = this.getParentOrNode(pattern);
         if (removed_node != null) {
+            System.out.println("Found node to remove: " + removed_node.obj);
             Node<T> tmp_left = removed_node.left;
             Node<T> tmp_right = removed_node.right;
             if (tmp_left == null && tmp_right == null) {
@@ -76,6 +94,9 @@ public class TreeSet<T> implements Set<T>
                 res = true;
             }
             size--;
+            System.out.println("Removed element: " + pattern);
+        } else {
+            System.out.println("Element not found: " + pattern);
         }
 
         return res;
@@ -202,6 +223,7 @@ public class TreeSet<T> implements Set<T>
             current = stack.pop();
             last_returned = current;
             T result = current.obj;
+            System.out.println("Next element: " + result);
             current = current.right;
             while (current != null) {
                 stack.push(current);
@@ -215,6 +237,7 @@ public class TreeSet<T> implements Set<T>
             if (last_returned == null) {
                 throw new IllegalStateException();
             }
+            System.out.println("Removing element in iterator: " + last_returned.obj);
             TreeSet.this.remove(last_returned.obj);
             last_returned = null;
         }
