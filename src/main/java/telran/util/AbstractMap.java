@@ -1,5 +1,8 @@
 package telran.util;
 
+import java.util.Iterator;
+import java.util.Objects;
+
 @SuppressWarnings("unchecked")
 public abstract class AbstractMap <K, V> implements Map<K, V>
 {
@@ -37,23 +40,37 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
     @Override
     public boolean containsKey(Object key)
     {
-        // TODO Implement this method
-        throw new UnsupportedOperationException("Method AbstractMap.containsKey not implemented yet");
+        boolean res = false;
+        Iterator<Entry<K, V>> iterator = set.iterator();
+        while (!res && iterator.hasNext()) {
+            Entry<K, V> item = iterator.next();
+            if (Objects.equals(key, item.getKey())) { res = true; }
+        }
+        return res;
     }
 
     @Override
     public boolean containsValue(Object value)
     {
-        // TODO Implement this method
-        throw new UnsupportedOperationException("Method AbstractMap.containsValue not implemented yet");
+        boolean res = false;
+        Iterator<Entry<K, V>> iterator = set.iterator();
+        while (!res && iterator.hasNext()) {
+            Entry<K, V> item = iterator.next();
+            if (Objects.equals(value, item.getValue())) { res = true; }
+        }
+        return res;
     }
 
     @Override
     public Set<K> keySet()
     {
         Set<K> keySet = getEmptyKeySet();
-        //TODO
-        return null;
+        Iterator<Entry<K, V>> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            Entry<K, V> item = iterator.next();
+            keySet.add(item.getKey());
+        }
+        return keySet;
     }
 
     @Override
@@ -65,8 +82,13 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
     @Override
     public Collection<V> values()
     {
-        // TODO Implement this method
-        throw new UnsupportedOperationException("Method AbstractMap.values not implemented yet");
+        Collection<V> values = new ArrayList<>();
+        Iterator<Entry<K, V>> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            Entry<K, V> item = iterator.next();
+            values.add(item.getValue());
+        }
+        return values;
     }
 
     @Override
