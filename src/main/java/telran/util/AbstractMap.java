@@ -7,7 +7,14 @@ import java.util.Objects;
 public abstract class AbstractMap <K, V> implements Map<K, V>
 {
     protected Set<Entry<K, V>> set;
+    private Set<K> keySet;
+
     protected abstract Set<K> getEmptyKeySet();
+
+    public AbstractMap() {
+        this.keySet = new HashSet<>();
+    }
+
     @Override
     public V get(Object key)
     {
@@ -28,6 +35,7 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
         V res = null;
         if (existed_entry == null) {
             set.add(new_entry);
+            keySet.add(key);
         } else {
             V existed_value = existed_entry.getValue();
             existed_entry.setValue(value);
@@ -40,13 +48,7 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
     @Override
     public boolean containsKey(Object key)
     {
-        boolean res = false;
-        Iterator<Entry<K, V>> iterator = set.iterator();
-        while (!res && iterator.hasNext()) {
-            Entry<K, V> item = iterator.next();
-            if (Objects.equals(key, item.getKey())) { res = true; }
-        }
-        return res;
+        return keySet.contains((K)key);
     }
 
     @Override

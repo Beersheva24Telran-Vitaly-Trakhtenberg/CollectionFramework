@@ -2,8 +2,6 @@ package telran.util;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.Arrays;
-
 import org.junit.jupiter.api.BeforeEach;
 
 public class HashMapTest extends AbstractMapTest {

@@ -3,7 +3,7 @@ package telran.util;
 @SuppressWarnings("unchecked")
 public interface Map<K, V>
 {
-    public static class Entry<K, V> implements Comparable<Entry<K,V>>
+    class Entry<K, V> implements Comparable<Entry<K,V>>
     {
         private final K key;
         private V value;
