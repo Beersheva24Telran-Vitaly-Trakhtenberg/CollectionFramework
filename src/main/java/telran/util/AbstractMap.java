@@ -65,11 +65,7 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
     public Set<K> keySet()
     {
         Set<K> keySet = getEmptyKeySet();
-        Iterator<Entry<K, V>> iterator = set.iterator();
-        while (iterator.hasNext()) {
-            Entry<K, V> item = iterator.next();
-            keySet.add(item.getKey());
-        }
+        set.forEach(entry -> keySet.add(entry.getKey()));
         return keySet;
     }
 
@@ -83,11 +79,7 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
     public Collection<V> values()
     {
         Collection<V> values = new ArrayList<>();
-        Iterator<Entry<K, V>> iterator = set.iterator();
-        while (iterator.hasNext()) {
-            Entry<K, V> item = iterator.next();
-            values.add(item.getValue());
-        }
+        set.forEach(entry -> values.add(entry.getValue()));
         return values;
     }
 
