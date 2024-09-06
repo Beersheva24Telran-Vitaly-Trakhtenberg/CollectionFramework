@@ -66,8 +66,6 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
     @Override
     public Set<K> keySet()
     {
-        Set<K> keySet = getEmptyKeySet();
-        set.forEach(entry -> keySet.add(entry.getKey()));
         return keySet;
     }
 
