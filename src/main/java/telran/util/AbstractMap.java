@@ -7,13 +7,8 @@ import java.util.Objects;
 public abstract class AbstractMap <K, V> implements Map<K, V>
 {
     protected Set<Entry<K, V>> set;
-    private Set<K> keySet;
 
     protected abstract Set<K> getEmptyKeySet();
-
-    public AbstractMap() {
-        this.keySet = new HashSet<>();
-    }
 
     @Override
     public V get(Object key)
@@ -35,7 +30,6 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
         V res = null;
         if (existed_entry == null) {
             set.add(new_entry);
-            keySet.add(key);
         } else {
             V existed_value = existed_entry.getValue();
             existed_entry.setValue(value);
@@ -48,7 +42,7 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
     @Override
     public boolean containsKey(Object key)
     {
-        return keySet.contains((K)key);
+        return get(key) != null;
     }
 
     @Override
@@ -66,6 +60,8 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
     @Override
     public Set<K> keySet()
     {
+        Set<K> keySet = getEmptyKeySet();
+        set.forEach(entry -> keySet.add(entry.getKey()));
         return keySet;
     }
 

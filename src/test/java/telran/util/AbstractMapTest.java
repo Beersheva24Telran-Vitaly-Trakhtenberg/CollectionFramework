@@ -47,4 +47,11 @@ public abstract class AbstractMapTest
         assertTrue(values.contains(10));
         assertTrue(values.contains(20));
     }
+
+    @Test
+    public void testBrokeMap()
+    {
+        map.keySet().add(1000000);
+        assertFalse(map.containsKey(1000000));
+    }
 }
