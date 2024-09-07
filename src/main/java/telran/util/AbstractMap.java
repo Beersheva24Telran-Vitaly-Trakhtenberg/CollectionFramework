@@ -42,7 +42,7 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
     @Override
     public boolean containsKey(Object key)
     {
-        return get(key) != null;
+        return set.contains(new Entry((K)key, null));
     }
 
     @Override
