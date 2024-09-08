@@ -7,7 +7,6 @@ import java.util.Objects;
 public abstract class AbstractMap <K, V> implements Map<K, V>
 {
     protected Set<Entry<K, V>> set;
-
     protected abstract Set<K> getEmptyKeySet();
 
     @Override
@@ -20,6 +19,14 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
             res = entry.getValue();
         }
         return res;
+    }
+    private Entry<K, V> getEntry(Object key) {
+        Entry<K, V> pattern = getPattern(key);
+        Entry<K,V> entry = set.get(pattern);
+        return entry;
+    }
+    private Entry<K, V> getPattern(Object key) {
+        return new Entry<>((K)key, null);
     }
 
     @Override
@@ -91,4 +98,14 @@ public abstract class AbstractMap <K, V> implements Map<K, V>
         return set.isEmpty();
     }
 
+    @Override
+    public V remove (K key) {
+        Entry<K, V> entry = getEntry(key);
+        V res = null;
+        if (entry != null) {
+            set.remove(entry);
+            res = entry.getValue();
+        }
+        return res;
+    }
 }

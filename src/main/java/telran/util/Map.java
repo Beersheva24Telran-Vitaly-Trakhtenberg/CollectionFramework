@@ -70,5 +70,5 @@ public interface Map<K, V>
     Collection<V> values();
     int size();
     boolean isEmpty();
-
+    V remove(K key);
 }
