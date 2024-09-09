@@ -7,7 +7,7 @@ import telran.util.LinkedList.Node;
 
 public class LinkedHashSet<T> implements Set<T>
 {
-    private LinkedList<T> list = new LinkedList<>();
+    private final LinkedList<T> list = new LinkedList<>();
     HashMap<T, Node<T>> map = new HashMap<>();
 
     @Override
@@ -69,9 +69,8 @@ public class LinkedHashSet<T> implements Set<T>
 
     private class LinkedHashSetIterator implements Iterator<T>
     {
-        private Iterator<T> list_iterator = list.iterator();
+        private final Iterator<T> list_iterator = list.iterator();
         private T current_iterator = null;
-        private int index_iterator = 0;
 
         @Override
         public boolean hasNext()

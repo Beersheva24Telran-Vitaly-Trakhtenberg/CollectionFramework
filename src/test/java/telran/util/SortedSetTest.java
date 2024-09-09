@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
 
-import java.util.Iterator;
-
 public class SortedSetTest extends SetTest {
     SortedSet<Integer> sortedSet;
 
