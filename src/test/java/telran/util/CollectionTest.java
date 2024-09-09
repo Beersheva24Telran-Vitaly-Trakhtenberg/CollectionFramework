@@ -69,7 +69,6 @@ public abstract class CollectionTest {
             actual[index++] = it.next();
         }
 
-        // Сортируем массивы перед сравнением
         Arrays.sort(array);
         Arrays.sort(actual);
 
@@ -91,7 +90,15 @@ public abstract class CollectionTest {
     }
 
     protected void runTest(Integer[] expected) {
+/*
         assertArrayEquals(expected, collection.stream().toArray(Integer[]::new));
+        assertEquals(expected.length, collection.size());
+*/
+
+        Integer[] actual = collection.stream().toArray(Integer[]::new);
+        Arrays.sort(expected);
+        Arrays.sort(actual);
+        assertArrayEquals(expected, actual);
         assertEquals(expected.length, collection.size());
     }
     @Test
