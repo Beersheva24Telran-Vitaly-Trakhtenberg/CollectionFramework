@@ -6,14 +6,14 @@ import org.junit.jupiter.api.*;
 
 import java.util.Iterator;
 
-//{3, -10, 20, 1, 10, 8, 100 , 17}
 public class SortedSetTest extends SetTest {
     SortedSet<Integer> sortedSet;
 
     @BeforeEach
     @Override
     void setUp() {
-        super.setUp();
+        collection = new SortedTreeSet<>();
+        super.setUp(); //{3, -10, 20, 1, 10, 8, 100 , 17}
         sortedSet = (SortedSet<Integer>) collection;
 
     }

@@ -150,7 +150,7 @@ public class LinkedList<T> implements List<T>
         }
     }
 
-    private void removeNode(int index)
+    protected void removeNode(int index)
     {
         if (index == 0) {
             removeHead();
